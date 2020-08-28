@@ -11,6 +11,8 @@ class DropColumns(BaseEstimator, TransformerMixin):
         return self
     
     def __norm(self, X):
+            import numpy as np
+            import pandas as pd
             from sklearn.preprocessing import Normalizer
             from sklearn.preprocessing import normalize
             #Quito los datos que no se van a normalizar
@@ -35,7 +37,8 @@ class DropColumns(BaseEstimator, TransformerMixin):
             return df_data_3
 
     def __ChangeValues(self, X):
-                
+                import numpy as np
+                import pandas as pd
                 from sklearn.impute import SimpleImputer
                 # Crear un objeto si para llenar con ceros
                 si_cero = SimpleImputer(
